@@ -5,12 +5,12 @@
 <body>
   <h1>Welcome to Meteor!</h1>
 
-  {{> hello a='123'}}
+  {{> hello test='123'}}
   {{> info}}
 </body>
 
 <template name="hello">
-  {{props.a}}
+  {{props.test}}
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
 </template>
