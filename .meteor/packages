@@ -20,7 +20,14 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
 
+coffeescript
+dalgard:jade
+aldeed:simple-schema
+aldeed:collection2
 comerc:template2
+comerc:template-two-way-binding
+
+# gwendall:template-inspector
 # gwendall:template-states
 # moberegger:validated-template
 # voidale:helpers-everywhere
@@ -29,4 +36,6 @@ comerc:template2
 # ouk:template-destruct
 # mpowaga:template-schema
 # themeteorites:blaze-magic-events
-aldeed:simple-schema
+# kadira:blaze-plus
+# useful:forms
+# comerc:autoform-fixtures

@@ -1,0 +1,27 @@
+head
+  title simple
+
+body
+  +demo(test='123')
+
+template(name="demo")
+  div props: 
+    = props.test
+  div 
+    a.node(href="#") NEW
+  form
+    input(type="text" value-bind="fieldHead|throttle:500") 
+    = state.fieldHead
+    input(type="text" value-bind="fieldBody|debounce:500") 
+    = state.fieldBody
+    button(type="submit") SUBMIT
+    button#reset RESET
+    = state.submitMessage
+  = state.errorMessages
+  ul
+    +each node in nodes
+      li 
+        a.node(href="#" data-node-id=node._id)  
+          = node.fieldHead  
+          | / 
+          = node.fieldBody
