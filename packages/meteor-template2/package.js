@@ -1,7 +1,7 @@
 Package.describe({
   summary: 'Syntactic sugar for blaze templates',
   name: 'comerc:template2',
-  version: '1.1.0',
+  version: '1.2.0',
   git: 'https://github.com/comerc/meteor-template2.git'
 });
 
@@ -16,14 +16,14 @@ Package.onUse(function(api) {
     'reactive-var',
     'templating',
     'blaze-html-templates',
-    'comerc:template-two-way-binding@1.4.0'
+    'comerc:template-two-way-binding@1.4.1'
   ]);
 
   api.addFiles([
-    'src/export.coffee',
+    'src/_init.coffee',
     'src/reactive-object.js',
     'src/template2.coffee',
-    'src/mvvm.coffee'
+    'src/model-map.coffee'
   ], 'client');
 
   api.export('Template2', 'client');

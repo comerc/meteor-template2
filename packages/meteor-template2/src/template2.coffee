@@ -68,6 +68,10 @@ Blaze.TemplateInstance.prototype.states = (states) ->
       @state.addProperty key, value
   return @
 
+# Init actions
+Blaze.TemplateInstance.prototype.actions = (actions) ->
+  # not implemented yet
+
 Blaze.TemplateInstance.prototype.helpers = (helpers) ->
   @view.template.helpers bindAllToTemplateInstance(helpers)
   return @

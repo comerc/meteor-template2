@@ -2,16 +2,16 @@
 
 require './main.jade'
 
-Template.demo.onCreated ->
-  @propsSchema new SimpleSchema(test: type: String)
-  @modelSchema Nodes.simpleSchema()
-  @states
+Template.demo.init
+  propsSchema: new SimpleSchema(test: type: String)
+  modelSchema: Nodes.simpleSchema()
+  states:
     nodeId: false
     submitMessage: ''
-  @helpers
+  helpers:
     nodes: ->
       Nodes.find()
-  @events
+  events:
     'click a.node': (e) ->
       e.preventDefault()
       @state.nodeId = $(e.target).data('node-id') or false
@@ -35,7 +35,6 @@ Template.demo.onRendered ->
       @modelDoc false
     @state.submitMessage = ''
 
-# old school of declaration with context of Template.instance()
 Template.demo.eventsByInstance
   'click #reset': (e) ->
     e.preventDefault()

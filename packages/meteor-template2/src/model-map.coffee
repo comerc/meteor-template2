@@ -74,14 +74,11 @@ TemplateTwoWayBinding.setter = (variable, value) ->
   @state[variable] = value
   return
 
-oldConstructView = Template.prototype.constructView
-
-Template.prototype.constructView = ->
-  @onRendered ->
-    if @__modelSchema # we may use Template2 wo model
-      TemplateTwoWayBinding.rendered @
-    return
-  return oldConstructView.apply @, arguments
+# oldConstructView = Template.prototype.constructView
+#
+# Blaze.Template.prototype.constructView = ->
+#
+#   return oldConstructView.apply @, arguments
 
 Template2.setModelCleanConfiguration = (config) ->
   modelCleanConfiguration = config

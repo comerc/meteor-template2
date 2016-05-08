@@ -26,15 +26,11 @@ aldeed:simple-schema
 aldeed:collection2
 comerc:template2
 
-# gwendall:template-inspector
-# gwendall:template-states
 # moberegger:validated-template
 # voidale:helpers-everywhere
 # useful:blaze-state
-# gwendall:template-inspector
 # ouk:template-destruct
 # mpowaga:template-schema
 # themeteorites:blaze-magic-events
-# kadira:blaze-plus
 # useful:forms
 # comerc:autoform-fixtures
