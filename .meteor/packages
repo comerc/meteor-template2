@@ -21,11 +21,10 @@ autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
 
 coffeescript
-dalgard:jade
+mquandalle:jade
 aldeed:simple-schema
 aldeed:collection2
 comerc:template2
-comerc:template-two-way-binding
 
 # gwendall:template-inspector
 # gwendall:template-states

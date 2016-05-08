@@ -1,7 +1,7 @@
 Package.describe({
   summary: 'Syntactic sugar for blaze templates',
   name: 'comerc:template2',
-  version: '1.0.0',
+  version: '1.1.0',
   git: 'https://github.com/comerc/meteor-template2.git'
 });
 
@@ -20,8 +20,11 @@ Package.onUse(function(api) {
   ]);
 
   api.addFiles([
-    'src/model-map.coffee',
-    'src/template2.js'
+    'src/export.coffee',
+    'src/reactive-object.js',
+    'src/template2.coffee',
+    'src/mvvm.coffee'
   ], 'client');
 
+  api.export('Template2', 'client');
 });

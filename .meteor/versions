@@ -20,9 +20,7 @@ callback-hook@1.0.8
 check@1.2.1
 coffeescript@1.0.17
 comerc:template-two-way-binding@1.4.0
-comerc:template2@1.0.0
-dalgard:jade@0.5.4_1
-dalgard:jade-compiler@0.5.4_1
+comerc:template2@1.1.0
 ddp@1.2.5
 ddp-client@1.2.7
 ddp-common@1.2.5
@@ -58,6 +56,8 @@ modules@0.6.1
 modules-runtime@0.6.3
 mongo@1.1.7
 mongo-id@1.0.4
+mquandalle:jade@0.4.9
+mquandalle:jade-compiler@0.4.5
 npm-mongo@1.4.43
 observe-sequence@1.0.11
 ordered-dict@1.0.7

@@ -14,6 +14,6 @@
 ## todo
 - [ ] AstronomySchema (for compatible with SimpleSchema)
 - [ ] original-error-errors-errorMessage-isValid-isInvalid helpers, like Useful Forms  
-
+- [ ] wait for throttle & debounce before form submit
 https://github.com/jagi/meteor-astronomy/issues/1
 https://github.com/jagi/meteor-astronomy/issues/112

@@ -7,7 +7,7 @@
     type: String
     label: 'My Head'
     max: 3
-    defaultValue: '111'
+    # defaultValue: '111'
   fieldBody:
     type: String
     label: 'My Body'
