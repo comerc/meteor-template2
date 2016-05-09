@@ -139,9 +139,7 @@ Template2.mixin('hello', {
   // Helpers & Events work like before but <this> is always the template instance!
   helpers: {}, events: {}, 
   // Lifecycle callbacks work exactly like with standard Blaze
-  onCreated() {},
-  onRendered() {},
-  onDestroyed() {},
+  onCreated() {}, onRendered() {}, onDestroyed() {},
 });
 
 // events declaration by old shool
