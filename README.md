@@ -282,7 +282,7 @@ This would cause an validation error because SimpleSchema removes empty strings 
 
 ### `Template2.setModelCleanConfiguration(Object)`
 
-The same as [previos](https://github.com/comerc/meteor-template2#templatecontrollersetpropscleanconfigurationobject), but for model.
+The same as [previos](https://github.com/comerc/meteor-template2#template2setpropscleanconfigurationobject), but for model.
 
 ## TODO
 - [ ] AstronomySchema (for compatible with SimpleSchema)
