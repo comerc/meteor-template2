@@ -1,7 +1,7 @@
 Package.describe({
   summary: 'Syntactic sugar for blaze templates',
   name: 'comerc:template2',
-  version: '1.3.0',
+  version: '1.3.1',
   git: 'https://github.com/comerc/meteor-template2.git'
 });
 

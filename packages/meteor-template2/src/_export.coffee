@@ -4,7 +4,7 @@ Template2.mixin = (template, config) ->
   if template instanceof Blaze.Template
   else
     if typeof template is 'string'
-      template = Blaze.Template[templateName]
+      template = Blaze.Template[template]
     else
       template = undefined
   template.onCreated ->
