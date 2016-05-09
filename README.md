@@ -135,9 +135,9 @@ Template2.mixin('hello', {
   // Setup Model Schema
   modelSchema: Posts.simpleSchema(),
   // Setup reactive template states
-  states: { /* ... */ },
+  states: {},
   // Helpers & Events work like before but <this> is always the template instance!
-  helpers: { /* ... */ }, events: { /* ... */ }, actions: { /* ... */ },
+  helpers: {}, events: {}, actions: {},
   // Lifecycle callbacks work exactly like with standard Blaze
   onCreated() {},
   onRendered() {},
