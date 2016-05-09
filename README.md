@@ -181,7 +181,7 @@ and would expect. You can still access the data context via `this.data`.
 ### `propsSchema: { clean: Function, validate: Function }`
 
 Any data passed to your component should be validated to avoid UI bugs
-that are hard to find. You can pass any object to the `props` option, which
+that are hard to find. You can pass any object to the `propsSchema` option, which
 provides a `clean` and `validate` function. `clean` is called first and can
 be used to cleanup the data context before validating it (e.g: adding default
 properties, transforming values etc.). `validate` is called directly after
@@ -197,7 +197,7 @@ that can be used as a reactive getter, also in the html template:
 
 ```javascript
 Template2.mixin('hello', {
-  props: new SimpleSchema({
+  propsSchema: new SimpleSchema({
     messageCount: {
       type: Number, // allows only integers!
       defaultValue: 0
@@ -225,7 +225,9 @@ a parent template can provide the `messageCount` prop with standard Blaze:
 If the parent passes down anything else than an integer value for `messageCount`
 our component will throw a nice validation error.
 
-### `modelSchema: { schema: Function, newContext: Function, clean: Function, validate: Function }`
+### `modelSchema: { schema: Function, newContext: Function }`
+
+You can pass any object to the `modelSchema` option, which provides a `schema` and `newContext` function.
 
 This api is compatible but not limited to
 [SimpleSchema](https://github.com/aldeed/meteor-simple-schema).
