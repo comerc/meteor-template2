@@ -142,11 +142,11 @@ Template2.mixin('hello', {
   onCreated() {}, onRendered() {}, onDestroyed() {},
 });
 
-// events declaration by old shool
+// events declaration by old shool, but with context by Template.instance()
 Template.hello.eventsByInstance({
   'submit form': function(e) {
     e.preventDefault();
-    // this - context of Template.instance()
+    // Get doc after clean and validation for save to model
     this.viewDoc(function(error, doc) {
       if (error) return;
       Posts.insert(doc);
@@ -160,6 +160,7 @@ Template.hello.onRendered(function() {
   this.autorun(function() {
     var doc = Posts.findOne();
     if (doc) {
+      // Set doc from model to view
       self.modelDoc(doc);
     }
   });
