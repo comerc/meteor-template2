@@ -309,7 +309,7 @@ The same as [previos](https://github.com/comerc/meteor-template2#template2setpro
 - [ ] Wait for throttle & debounce before form submit
 - [ ] Demo with [meteor7](https://github.com/daveeel/meteor7)
 - [ ] Actions, like [blaze-magic-events](https://github.com/themeteorites/blaze-magic-events)
-- [*] Template.hello.init(config) to Template2.mixin(template, config)
+- [x] Template.hello.init(config) to Template2.mixin(template, config)
 - [ ] Remove underscore dependence
 
 ## Inspired by
