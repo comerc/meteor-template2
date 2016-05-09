@@ -2,7 +2,7 @@
 
 require './main.jade'
 
-Template.demo.init
+Template2.mixin Template.hello,
   propsSchema: new SimpleSchema(test: type: String)
   modelSchema: Nodes.simpleSchema()
   states:
@@ -27,7 +27,7 @@ Template.demo.init
           @state.nodeId = Nodes.insert doc,
             => @state.submitMessage = 'inserted'
 
-Template.demo.onRendered ->
+Template.hello.onRendered ->
   @autorun =>
     if @state.nodeId
       @modelDoc Nodes.findOne @state.nodeId
@@ -35,7 +35,7 @@ Template.demo.onRendered ->
       @modelDoc false
     @state.submitMessage = ''
 
-Template.demo.eventsByInstance
+Template.hello.eventsByInstance
   'click #reset': (e) ->
     e.preventDefault()
     @modelDoc false

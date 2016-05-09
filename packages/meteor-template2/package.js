@@ -1,7 +1,7 @@
 Package.describe({
   summary: 'Syntactic sugar for blaze templates',
   name: 'comerc:template2',
-  version: '1.2.0',
+  version: '1.3.0',
   git: 'https://github.com/comerc/meteor-template2.git'
 });
 
@@ -12,6 +12,7 @@ Package.onUse(function(api) {
 
   api.use([
     'coffeescript',
+    'underscore',
     'ecmascript',
     'reactive-var',
     'templating',
@@ -20,7 +21,7 @@ Package.onUse(function(api) {
   ]);
 
   api.addFiles([
-    'src/_init.coffee',
+    'src/_export.coffee',
     'src/reactive-object.js',
     'src/template2.coffee',
     'src/model-map.coffee'

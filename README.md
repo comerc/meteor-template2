@@ -51,7 +51,7 @@ You have clicked the button {{state.counter}} times.
 ```
 
 ```javascript
-Template.hello.init({
+Template2.mixin('hello', {
   states: {
     counter: 0 // default value
   },
@@ -127,13 +127,21 @@ Posts.attachSchema(PostSchema);
 ```
 
 ```javascript
-Template.hello.init({
+Template2.mixin('hello', {
+  // Validate the properties passed to the template from parents
   propsSchema: new SimpleSchema({
     param: { type: String }
   }),
+  //
   modelSchema: Posts.simpleSchema(),
-  states: { /* ... */ }, helpers: { /* ... */ },
-  events: { /* ... */ }, actions: { /* ... */ },
+  // Setup reactive template states
+  states: { /* ... */ },
+  // Helpers & Events work like before but <this> is always the template instance!
+  helpers: { /* ... */ }, events: { /* ... */ }, actions: { /* ... */ },
+  // Lifecycle callbacks work exactly like with standard Blaze
+  onCreated() {},
+  onRendered() {},
+  onDestroyed() {},
 });
 
 // events declaration by old shool
@@ -148,6 +156,7 @@ Template.hello.eventsByInstance({
   }
 });
 
+// onRendered declaration by old shool
 Template.hello.onRendered(function() {
   var self = this;
   this.autorun(function() {
@@ -161,12 +170,15 @@ Template.hello.onRendered(function() {
 
 ## API
 
+### `onCreated`, `onRenderd`, `onDestroyed`
+Work exactly the same as with standard Blaze.
+
 ### `events`, `helpers`
 Work exactly the same as normal but `this` inside the handlers is always
 a reference to the `Template.instance()`. In most cases that's what you want
 and would expect. You can still access the data context via `this.data`.
 
-### `props: { clean: Function, validate: Function }`
+### `propsSchema: { clean: Function, validate: Function }`
 
 Any data passed to your component should be validated to avoid UI bugs
 that are hard to find. You can pass any object to the `props` option, which
@@ -184,7 +196,7 @@ any property you define in the schema is turned into a template helper
 that can be used as a reactive getter, also in the html template:
 
 ```javascript
-Template2.hello.init({
+Template2.mixin('hello', {
   props: new SimpleSchema({
     messageCount: {
       type: Number, // allows only integers!
@@ -212,6 +224,11 @@ a parent template can provide the `messageCount` prop with standard Blaze:
 
 If the parent passes down anything else than an integer value for `messageCount`
 our component will throw a nice validation error.
+
+### `modelSchema: { schema: Function, newContext: Function, clean: Function, validate: Function }`
+
+This api is compatible but not limited to
+[SimpleSchema](https://github.com/aldeed/meteor-simple-schema).
 
 ### `states: { myProperty: defaultValue, … }`
 
@@ -286,10 +303,12 @@ The same as [previos](https://github.com/comerc/meteor-template2#template2setpro
 
 ## TODO
 - [ ] AstronomySchema (for compatible with SimpleSchema)
-- [ ] Add original and error* helpers, like [Useful Forms](https://github.com/usefulio/forms)  
+- [ ] Add `original` and `error`* helpers, like [useful:forms](https://github.com/usefulio/forms)  
 - [ ] Wait for throttle & debounce before form submit
 - [ ] Demo with [meteor7](https://github.com/daveeel/meteor7)
-- [ ] Actions
+- [ ] Actions, like [blaze-magic-events](https://github.com/themeteorites/blaze-magic-events)
+- [*] Template.hello.init(config) to Template2.mixin(template, config)
+- [ ] Remove underscore dependence
 
 ## Inspired by
 
@@ -313,7 +332,6 @@ The same as [previos](https://github.com/comerc/meteor-template2#template2setpro
 - [meteorhacks:flow-components](https://github.com/meteorhacks/flow-components)
 - [kadira:blaze-plus](https://github.com/kadirahq/blaze-plus)
 - [templates:forms](https://github.com/meteortemplates/forms)
-
 
 <!-- ## Refs
 - https://github.com/jagi/meteor-astronomy/issues/1
