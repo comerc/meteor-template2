@@ -286,7 +286,7 @@ The same as [previos](https://github.com/comerc/meteor-template2#template2setpro
 
 ## TODO
 - [ ] AstronomySchema (for compatible with SimpleSchema)
-- [ ] Add original and error* helpers, like [Useful Forms](https://github.com/usefulio/meteor-useful-forms)  
+- [ ] Add original and error* helpers, like [Useful Forms](https://github.com/usefulio/forms)  
 - [ ] Wait for throttle & debounce before form submit
 - [ ] Demo with [meteor7](https://github.com/daveeel/meteor7)
 - [ ] Actions
