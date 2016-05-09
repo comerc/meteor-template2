@@ -132,7 +132,7 @@ Template2.mixin('hello', {
   propsSchema: new SimpleSchema({
     param: { type: String }
   }),
-  //
+  // Setup Model Schema
   modelSchema: Posts.simpleSchema(),
   // Setup reactive template states
   states: { /* ... */ },
