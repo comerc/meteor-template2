@@ -64,10 +64,14 @@ Template2.mixin('hello', {
 });
 ```
 
+>Yeah i have used [ViewModel](http://viewmodel.org) before – it's also nice, and there are also [Blaze Components](https://github.com/peerlibrary/meteor-blaze-components). My only "problem" with these existing packages is that they introduce new concepts on top of the standard Blaze api. I just wanted less boilerplate and that best practices like setting up ReactiveVars, validating properties passed to a template or accessing Template.instance() become a no-brainer for the whole team.
+>
+>The idea for this package came up during a Meteor training with some Devs where realized how complicated it is to explain the best practices with Blaze and that they had a ton of questions like "how can i access the template instance in helpers / event handlers" or "how does a template manage state" – which is so basic that it should be the easiest thing in the world.
+
 ## Key features
-- Compatible with Blaze Template.
+- Compatible with Blaze Template. We love it.
 - Minimum changes for migration your great project to Template2.
-- One time declaration of variables to model via html-input attribute.
+- One time declaration of variables to model via `<input value-bind>` attribute.
 - Validate input data and get doc for writing to model without coding.
 - Support of  [SimpleSchema](https://github.com/aldeed/meteor-simple-schema), may be extended for support any other model  ([Astronomy](https://github.com/jagi/meteor-astronomy) etc.)
 
@@ -137,7 +141,7 @@ Template2.mixin('hello', {
   // Setup reactive template states
   states: {},
   // Helpers & Events work like before but <this> is always the template instance!
-  helpers: {}, events: {}, 
+  helpers: {}, events: {},
   // Lifecycle callbacks work exactly like with standard Blaze
   onCreated() {}, onRendered() {}, onDestroyed() {},
 });
