@@ -142,7 +142,7 @@ Template2.mixin('hello', {
   onCreated() {}, onRendered() {}, onDestroyed() {},
 });
 
-// events declaration by old shool, but with context by Template.instance()
+// events declaration by old style, but with context by Template.instance()
 Template.hello.eventsByInstance({
   'submit form': function(e) {
     e.preventDefault();
@@ -154,7 +154,7 @@ Template.hello.eventsByInstance({
   }
 });
 
-// onRendered declaration by old shool
+// onRendered declaration by old style may also be used
 Template.hello.onRendered(function() {
   var self = this;
   this.autorun(function() {
