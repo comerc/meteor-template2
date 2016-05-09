@@ -307,7 +307,7 @@ The same as [previos](https://github.com/comerc/meteor-template2#template2setpro
 - [useful:blaze-state](https://github.com/usefulio/blaze-state)
 - [useful:forms](https://github.com/usefulio/forms)
 - [ouk:template-destruct](https://github.com/andrejsm/meteor-template-destruct)
--  [mpowaga:template-schema](mpowaga:template-schema)
+- [mpowaga:template-schema](https://github.com/mpowaga/meteor-template-schema)
 - [peerlibrary:blaze-components](https://github.com/peerlibrary/meteor-blaze-components)
 - [aldeed:template-extension](https://github.com/aldeed/meteor-template-extension)
 - [meteorhacks:flow-components](https://github.com/meteorhacks/flow-components)
