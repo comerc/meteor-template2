@@ -17,8 +17,7 @@ Template2.mixin = (template, config) ->
     return
   template.onCreated config.onCreated if config.onCreated
   template.onRendered ->
-    if @__modelSchema # we may use Template2 wo model
-      TemplateTwoWayBinding.rendered @
+    TemplateTwoWayBinding.rendered @
     return
   template.onRendered config.onCreated if config.onRendered
   template.onDestroyed config.onDestroyed if config.onDestroyed

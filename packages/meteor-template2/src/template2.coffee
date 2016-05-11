@@ -28,9 +28,9 @@ Blaze.TemplateInstance.prototype.propsSchema = (schema) ->
   if not @props
     @props = new ReactiveObject
     helpers = {}
-    # old style
-    # helpers.props = (variable) ->
-    #   Template.instance().props[variable]
+    # for usage as {{propsBy "variable-name"}}
+    helpers.propsBy = (variable) ->
+      Template.instance().props[variable]
     helpers.props = ->
       Template.instance().props
     @view.template.helpers helpers
@@ -48,16 +48,16 @@ Blaze.TemplateInstance.prototype.propsSchema = (schema) ->
           @props.addProperty key, value
   return @
 
-# Init states
+# Init state
 Blaze.TemplateInstance.prototype.states = (states) ->
   if not states
     throw new Error('property states required')
   if not @state
     @state = new ReactiveObject
     helpers = {}
-    # old style
-    # helpers.state = (variable) ->
-    #   Template.instance().state[variable]
+    # for usage as {{stateBy "variable-name"}}
+    helpers.stateBy = (variable) ->
+      Template.instance().state[variable]
     helpers.state = ->
       Template.instance().state
     @view.template.helpers helpers

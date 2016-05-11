@@ -68,9 +68,10 @@ TemplateTwoWayBinding.getter = (variable) ->
   return @state[variable]
 
 TemplateTwoWayBinding.setter = (variable, value) ->
-  doc = {}
-  doc[variable] = value
-  @validateOne.call @, doc, variable
+  if @__modelSchema # we may use TemplateTwoWayBinding wo model
+    doc = {}
+    doc[variable] = value
+    @validateOne.call @, doc, variable
   @state[variable] = value
   return
 
