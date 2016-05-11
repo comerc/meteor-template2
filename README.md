@@ -173,7 +173,7 @@ Template.hello.onRendered(function() {
 
 ## API
 
-### `onCreated`, `onRenderd`, `onDestroyed`
+### `onCreated`, `onRendered`, `onDestroyed`
 Work exactly the same as with standard Blaze.
 
 ### `events`, `helpers`
