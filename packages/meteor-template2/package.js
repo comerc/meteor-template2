@@ -1,7 +1,7 @@
 Package.describe({
   summary: 'Syntactic sugar for blaze templates',
   name: 'comerc:template2',
-  version: '1.3.2',
+  version: '1.3.3',
   git: 'https://github.com/comerc/meteor-template2.git'
 });
 
@@ -18,7 +18,7 @@ Package.onUse(function(api) {
     'templating',
     'blaze-html-templates',
     'comerc:template-two-way-binding@1.4.1'
-  ]);
+  ], 'client');
 
   api.addFiles([
     'src/_export.coffee',
