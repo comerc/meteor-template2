@@ -120,8 +120,8 @@ Posts.attachSchema(PostSchema);
 </body>
 
 <template name="hello">
-  <p><code>props.param</code> {{props.param}}</p>
-  <p><code>state.value</code> {{state.value}}</p>
+  <p><code>props.param</code> {{props.param}} or {{propsBy "param"}}</p>
+  <p><code>state.value</code> {{state.value}} or {{stateBy "value"}}</p>
   <form>
     <input value-bind="value|debounce:300"/>
     <button type="submit">Submit</button>
