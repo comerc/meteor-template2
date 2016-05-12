@@ -71,6 +71,7 @@ Blaze.TemplateInstance.prototype.states = (states) ->
 # Init actions
 Blaze.TemplateInstance.prototype.actions = (actions) ->
   # not implemented yet
+  return @
 
 Blaze.TemplateInstance.prototype.helpers = (helpers) ->
   @view.template.helpers bindAllToTemplateInstance(helpers)
