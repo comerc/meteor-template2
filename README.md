@@ -4,6 +4,35 @@
 
 [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) for Meteor with  [Two-Way Binding](https://github.com/comerc/meteor-template-two-way-binding) via [Model Schema](https://github.com/aldeed/meteor-simple-schema).
 
+## Table of Contents
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+  - [Intro](#intro)
+  - [Key features](#key-features)
+  - [How to run Demo](#how-to-run-demo)
+  - [Installation](#installation)
+  - [Basic Usage](#basic-usage)
+  - [API](#api)
+    - [`onCreated`, `onRendered`, `onDestroyed`](#oncreated-onrendered-ondestroyed)
+    - [`events`, `helpers`](#events-helpers)
+    - [`propsSchema: { clean: Function, validate: Function }`](#propsschema--clean-function-validate-function-)
+    - [`modelSchema: { schema: Function, newContext: Function }`](#modelschema--schema-function-newcontext-function-)
+    - [`states: { myProperty: defaultValue, … }`](#states--myproperty-defaultvalue-%E2%80%A6-)
+    - [`viewDoc(callback)`](#viewdoccallback)
+    - [`modelDoc(doc)`](#modeldocdoc)
+  - [Two-Way Binding features](#two-way-binding-features)
+  - [Configuration](#configuration)
+    - [`Template2.setPropsCleanConfiguration(Object)`](#template2setpropscleanconfigurationobject)
+    - [`Template2.setModelCleanConfiguration(Object)`](#template2setmodelcleanconfigurationobject)
+  - [TODO](#todo)
+  - [Inspired by](#inspired-by)
+  - [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Intro
 
 Fork of [TemplateController](https://github.com/meteor-space/template-controller):
