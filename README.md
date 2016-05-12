@@ -372,4 +372,4 @@ The same as [previos](https://github.com/comerc/meteor-template2#template2setpro
 - https://github.com/jagi/meteor-astronomy/issues/112 -->
 
 ## License
-Licensed under the MIT license.
+MIT
