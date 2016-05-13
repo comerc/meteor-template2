@@ -100,9 +100,10 @@ Template2.mixin('hello', {
 ## Key features
 - Compatible with Blaze Template. We love it.
 - Minimum changes for migration your great project to Template2.
-- One time declaration of variables to model via `<input value-bind>` attribute.
-- Validate input data and get doc for writing to model without coding.
-- Support of  [SimpleSchema](https://github.com/aldeed/meteor-simple-schema), may be extended for support any other model  ([Astronomy](https://github.com/jagi/meteor-astronomy) etc.)
+- One time declaration of variables to Model via `<input value-bind>` attribute.
+- Validate input data and get doc for writing to Model without coding.
+- Support of  [SimpleSchema](https://github.com/aldeed/meteor-simple-schema), may be extended for support any other Model  ([Astronomy](https://github.com/jagi/meteor-astronomy) etc.)
+- The ability to use Two-Way Binding Features without Model.
 
 ## How to run Demo
 
