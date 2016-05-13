@@ -103,7 +103,8 @@ Template2.mixin('hello', {
 - One time declaration of variables to Model via `<input value-bind>` attribute.
 - Validate input data and get doc for writing to Model without coding.
 - Support of  [SimpleSchema](https://github.com/aldeed/meteor-simple-schema), may be extended for support any other Model  ([Astronomy](https://github.com/jagi/meteor-astronomy) etc.)
-- The ability to use Two-Way Binding Features without Model.
+- Usage of Two-Way Binding Features without Model.
+- The ability to use field names with hyphen like "field-name".
 
 ## How to run Demo
 
