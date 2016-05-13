@@ -104,7 +104,7 @@ Template2.mixin('hello', {
 - Validate input data and get doc for writing to Model without coding.
 - Support of  [SimpleSchema](https://github.com/aldeed/meteor-simple-schema), may be extended for support any other Model  ([Astronomy](https://github.com/jagi/meteor-astronomy) etc.)
 - Usage of Two-Way Binding Features without Model.
-- The ability to use field names with hyphen like "field-name".
+- The ability to use field names with hyphen like "field-name" (using helpers propsOf and stateOf).
 
 ## How to run Demo
 
