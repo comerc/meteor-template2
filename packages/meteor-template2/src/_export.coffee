@@ -19,5 +19,5 @@ Template2.mixin = (template, config) ->
   template.onRendered ->
     TemplateTwoWayBinding.rendered @
     return
-  template.onRendered config.onCreated if config.onRendered
+  template.onRendered config.onRendered if config.onRendered
   template.onDestroyed config.onDestroyed if config.onDestroyed
