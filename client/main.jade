@@ -10,9 +10,9 @@ template(name="hello")
   div 
     a.node(href="#") NEW
   form
-    input(type="text" value-bind="fieldHead|throttle:500") 
+    input(type="text" value-bind="fieldHead@throttle:500") 
     = state.fieldHead
-    input(type="text" value-bind="fieldBody|debounce:500") 
+    input(type="text" value-bind="fieldBody@debounce:500") 
     = state.fieldBody
     button(type="submit") SUBMIT
     button#reset RESET

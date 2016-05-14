@@ -154,7 +154,7 @@ Posts.attachSchema(PostSchema);
   <p><code>props.param</code> {{props.param}} or {{propsOf "param"}}</p>
   <p><code>state.value</code> {{state.value}} or {{stateOf "value"}}</p>
   <form>
-    <input value-bind="value|debounce:300"/>
+    <input value-bind="value@debounce:300"/>
     <button type="submit">Submit</button>
   </form>
   <p>{{state.errorMessages}}</p>
