@@ -1,5 +1,5 @@
 Package.describe({
-  summary: 'Syntactic sugar for blaze templates',
+  summary: 'MVVM for Meteor with Two-Way Binding via Model Schema',
   name: 'comerc:template2',
   version: '1.4.3',
   git: 'https://github.com/comerc/meteor-template2.git'
