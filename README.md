@@ -345,6 +345,7 @@ The same as [previos](https://github.com/comerc/meteor-template2#template2setpro
 - [ ] Actions, like [blaze-magic-events](https://github.com/themeteorites/blaze-magic-events)
 - [x] Template.hello.init(config) to Template2.mixin(template, config)
 - [ ] Remove underscore dependence
+- [x] [Demo](https://github.com/comerc/meteor-mvvm-mdl-demo) with [Material Design Lite](https://getmdl.io/)
 
 ## Inspired by
 
