@@ -16,8 +16,9 @@ Template2.mixin = (template, config) ->
     @actions config.actions if config.actions
     return
   template.onCreated config.onCreated if config.onCreated
+  template.onRendered config.onRendered if config.onRendered
   template.onRendered ->
     TemplateTwoWayBinding.rendered @
     return
-  template.onRendered config.onRendered if config.onRendered
+  # XXX then Template.hello.onRendered ->
   template.onDestroyed config.onDestroyed if config.onDestroyed

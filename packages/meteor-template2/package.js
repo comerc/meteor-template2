@@ -1,7 +1,7 @@
 Package.describe({
   summary: 'MVVM for Meteor with Two-Way Binding via Model Schema',
   name: 'comerc:template2',
-  version: '1.4.3',
+  version: '1.4.4',
   git: 'https://github.com/comerc/meteor-template2.git'
 });
 
@@ -17,7 +17,7 @@ Package.onUse(function(api) {
     'reactive-var',
     'templating',
     'blaze-html-templates',
-    'comerc:template-two-way-binding@1.6.0'
+    'comerc:template-two-way-binding@1.6.1'
   ], 'client');
 
   api.addFiles([

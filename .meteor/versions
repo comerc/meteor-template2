@@ -19,8 +19,8 @@ caching-html-compiler@1.0.6
 callback-hook@1.0.8
 check@1.2.1
 coffeescript@1.0.17
-comerc:template-two-way-binding@1.4.3
-comerc:template2@1.4.0
+comerc:template-two-way-binding@1.6.1
+comerc:template2@1.4.4
 ddp@1.2.5
 ddp-client@1.2.7
 ddp-common@1.2.5
