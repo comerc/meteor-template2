@@ -35,7 +35,7 @@
 
 ## Intro
 
-Fork of [TemplateController](https://github.com/meteor-space/template-controller/issues/35):
+Fork of TemplateController ([what difference](https://github.com/meteor-space/template-controller/issues/35)):
 
 >**Supports the best practices of writing Blaze templates**
 >
