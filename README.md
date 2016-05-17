@@ -98,7 +98,7 @@ Template2.mixin('hello', {
 >The idea for this package came up during a Meteor training with some Devs where realized how complicated it is to explain the best practices with Blaze and that they had a ton of questions like "how can i access the template instance in helpers / event handlers" or "how does a template manage state" – which is so basic that it should be the easiest thing in the world.
 
 ## Key features
-- Compatible with Blaze.Template - we love it.
+- Compatible with Blaze Template - we love it.
 - Minimum changes for migration your great project to Template2.
 - One time declaration of variables to Model via `<input value-bind>` attribute.
 - Validate input data and get doc for writing to Model without coding.
