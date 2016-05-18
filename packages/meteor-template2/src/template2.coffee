@@ -28,9 +28,6 @@ Blaze.TemplateInstance.prototype.propsSchema = (schema) ->
   if not @props
     @props = new ReactiveObject
     helpers = {}
-    # for usage as {{propsOf "variable-name"}}
-    helpers.propsOf = (variable) ->
-      Template.instance().props[variable]
     helpers.props = ->
       Template.instance().props
     @view.template.helpers helpers
@@ -55,9 +52,6 @@ Blaze.TemplateInstance.prototype.states = (states) ->
   if not @state
     @state = new ReactiveObject
     helpers = {}
-    # for usage as {{stateOf "variable-name"}}
-    helpers.stateOf = (variable) ->
-      Template.instance().state[variable]
     helpers.state = ->
       Template.instance().state
     @view.template.helpers helpers

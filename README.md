@@ -104,7 +104,6 @@ Template2.mixin('hello', {
 - Validate input data and get doc for writing to Model without coding.
 - Support of  [SimpleSchema](https://github.com/aldeed/meteor-simple-schema), may be extended for support any other Model  ([Astronomy](https://github.com/jagi/meteor-astronomy) etc.)
 - Usage of Two-Way Binding Features without Model.
-- Variables with hyphen like `"field-name"` (using helpers `propsOf` and `stateOf`).
 
 ## How to run Demo
 
@@ -151,8 +150,8 @@ Posts.attachSchema(PostSchema);
 </body>
 
 <template name="hello">
-  <p><code>props.param</code> {{props.param}} or {{propsOf "param"}}</p>
-  <p><code>state.value</code> {{state.value}} or {{stateOf "value"}}</p>
+  <p><code>props.param</code> {{props.param}}</p>
+  <p><code>state.value</code> {{state.value}}</p>
   <form>
     <input value-bind="value@debounce:300"/>
     <button type="submit">Submit</button>
@@ -346,6 +345,7 @@ The same as [previos](https://github.com/comerc/meteor-template2#template2setpro
 - [x] Template.hello.init(config) to Template2.mixin(template, config)
 - [ ] Remove underscore dependence
 - [x] [Demo](https://github.com/comerc/meteor-mvvm-mdl-demo) with [Material Design Lite](https://getmdl.io/)
+- [x] Remove helpers `propsOf` and `stateOf`, we may use {{state.[field-name]}}
 
 ## Inspired by
 
