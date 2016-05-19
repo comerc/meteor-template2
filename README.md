@@ -345,7 +345,7 @@ The same as [previos](https://github.com/comerc/meteor-template2#template2setpro
 - [x] Template.hello.init(config) to Template2.mixin(template, config)
 - [ ] Remove underscore dependence
 - [x] [Demo](https://github.com/comerc/meteor-mvvm-mdl-demo) with [Material Design Lite](https://getmdl.io/)
-- [x] Remove helpers `propsOf` and `stateOf`, we may use {{state.[field-name]}}
+- [x] Remove helpers `propsOf` and `stateOf`, we may use `{{state.[field-name]}}`
 
 ## Inspired by
 
