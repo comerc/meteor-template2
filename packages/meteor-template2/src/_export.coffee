@@ -6,7 +6,7 @@ Template2.mixin = (template, config) ->
     if typeof template is 'string'
       template = Blaze.Template[template]
     else
-      template = undefined
+      throw new Error 'template not found'
   template.onCreated ->
     @propsSchema config.propsSchema if config.propsSchema
     @modelSchema config.modelSchema if config.modelSchema
