@@ -150,8 +150,8 @@ Posts.attachSchema(PostSchema);
 </body>
 
 <template name="hello">
-  <p><code>props.param</code> {{props.myParam}}</p>
-  <p><code>state.value</code> {{state.myValue}}</p>
+  <p><code>props.myParam</code> {{props.myParam}}</p>
+  <p><code>state.myValue</code> {{state.myValue}}</p>
   <form>
     <input value-bind="myValue"/>
     <button type="submit">Submit</button>
