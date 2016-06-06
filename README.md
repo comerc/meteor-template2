@@ -25,8 +25,8 @@
     - [`modelDoc(doc)`](#modeldocdoc)
   - [Two-Way Binding features](#two-way-binding-features)
   - [Configuration](#configuration)
-    - [`Template2Config.propsClean(Object)`](#template2configpropscleanobject)
-    - [`Template2Config.modelClean(Object)`](#template2configmodelcleanobject)
+    - [`Template2Config.propsClean`](#template2configpropsclean)
+    - [`Template2Config.modelClean`](#template2configmodelclean)
   - [TODO](#todo)
   - [Inspired by](#inspired-by)
   - [License](#license)
@@ -320,7 +320,7 @@ Described [here](https://github.com/comerc/meteor-template-two-way-binding).
 
 ## Configuration
 
-### `Template2Config.propsClean(Object)`
+### `Template2Config.propsClean`
 Enables you to configure the props cleaning operation of libs like SimpleSchema. Checkout [SimpleSchema clean docs](https://github.com/aldeed/meteor-simple-schema#cleaning-data) to
 see your options.
 
@@ -332,9 +332,9 @@ Here is one example why `removeEmptyStrings: true` is the default config:
 `i18n` might initially return an empty string for your translation.
 This would cause an validation error because SimpleSchema removes empty strings by default when cleaning the data.
 
-### `Template2Config.modelClean(Object)`
+### `Template2Config.modelClean`
 
-The same as [previos](https://github.com/comerc/meteor-template2#template2configpropscleanobject), but for model.
+The same as [previos](https://github.com/comerc/meteor-template2#template2configpropsclean), but for model.
 
 ## TODO
 - [ ] AstronomySchema (for compatible with SimpleSchema)
