@@ -134,7 +134,7 @@ $ meteor add aldeed:collection2
 Posts = new Mongo.Collection('posts');
 
 PostSchema = new SimpleSchema({
-  value: {
+  myValue: {
     type: String,
     min: 3,
     defaultValue: '777'
@@ -146,14 +146,14 @@ Posts.attachSchema(PostSchema);
 
 ```handlebars
 <body>
-  {{> hello param="123"}}
+  {{> hello myParam="123"}}
 </body>
 
 <template name="hello">
-  <p><code>props.param</code> {{props.param}}</p>
-  <p><code>state.value</code> {{state.value}}</p>
+  <p><code>props.myParam</code> {{props.myParam}}</p>
+  <p><code>state.myValue</code> {{state.myValue}}</p>
   <form>
-    <input value-bind="value@debounce:300"/>
+    <input value-bind="myValue"/>
     <button type="submit">Submit</button>
   </form>
   <p>{{state.errorMessages}}</p>
