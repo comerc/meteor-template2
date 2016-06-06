@@ -3,6 +3,7 @@ head
 
 body
   +hello(test="123")
+  +info
 
 template(name="hello")
   h1 Welcome to Template2! 
@@ -26,3 +27,9 @@ template(name="hello")
           = node.fieldHead  
           | / 
           = node.fieldBody
+
+template(name='info')
+  h2 See also
+  a(href='https://github.com/comerc/meteor-mvvm-mdl-demo') Demo
+  |&nbsp;with&nbsp;
+  a(href='https://getmdl.io/') Material Design Lite

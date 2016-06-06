@@ -2,7 +2,7 @@
 
 require './main.jade'
 
-Template2.mixin 'hello',
+Template2 'hello',
   propsSchema: new SimpleSchema(test: type: String)
   modelSchema: Nodes.simpleSchema()
   states:

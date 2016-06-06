@@ -17,8 +17,6 @@ propertyValidationError = (error, templateName) ->
   error.message = "in <#{templateName}> #{error.message}"
   return error
 
-propsCleanConfiguration = {}
-
 # Init props
 Blaze.TemplateInstance.prototype.propsSchema = (schema) ->
   # Setup validated reactive props passed from the outside
@@ -33,7 +31,7 @@ Blaze.TemplateInstance.prototype.propsSchema = (schema) ->
     @view.template.helpers helpers
     @autorun =>
       currentData = Template.currentData() or {}
-      @__propsSchema.clean currentData, propsCleanConfiguration
+      @__propsSchema.clean currentData, Template2Config.propsClean
       try
         @__propsSchema.validate currentData
       catch error
@@ -82,6 +80,3 @@ Blaze.Template.prototype.helpersByInstance = (helpers) ->
 Blaze.Template.prototype.eventsByInstance = (eventMap) ->
   @events bindAllToTemplateInstance(eventMap)
   return
-
-Template2.setPropsCleanConfiguration = (config) ->
-  propsCleanConfiguration = config

@@ -48,15 +48,13 @@ Blaze.TemplateInstance.prototype.modelDoc = (doc) ->
       @state[variable] = field.defaultValue or ''
   return @
 
-modelCleanConfiguration = {}
-
 Blaze.TemplateInstance.prototype.viewDoc = (callback) ->
   checkModelSchema @
   error = null
   doc = {}
   for variable of @__modelSchema.schema()
     doc[variable] = @state[variable]
-  @__modelSchema.clean(doc, modelCleanConfiguration)
+  @__modelSchema.clean doc, Template2Config.modelClean
   if not @validate(doc)
     error = new Error 'Validation Error'
     error.name = 'ValidationError'
@@ -80,6 +78,3 @@ TemplateTwoWayBinding.setter = (variable, value) ->
 # Blaze.Template.prototype.constructView = ->
 #
 #   return oldConstructView.apply @, arguments
-
-Template2.setModelCleanConfiguration = (config) ->
-  modelCleanConfiguration = config

@@ -1,6 +1,6 @@
-Template2 = {}
+Template2Config = {}
 
-Template2.mixin = (template, config) ->
+Template2 = (template, config) ->
   if template instanceof Blaze.Template
   else
     if typeof template is 'string'
