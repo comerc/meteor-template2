@@ -25,8 +25,8 @@
     - [`modelDoc(doc)`](#modeldocdoc)
   - [Two-Way Binding features](#two-way-binding-features)
   - [Configuration](#configuration)
-    - [`Template2.setPropsCleanConfiguration(Object)`](#template2setpropscleanconfigurationobject)
-    - [`Template2.setModelCleanConfiguration(Object)`](#template2setmodelcleanconfigurationobject)
+    - [`Template2Config.propsClean(Object)`](#template2configpropscleanobject)
+    - [`Template2Config.modelClean(Object)`](#template2configmodelcleanobject)
   - [TODO](#todo)
   - [Inspired by](#inspired-by)
   - [License](#license)
@@ -80,7 +80,7 @@ You have clicked the button {{state.counter}} times.
 ```
 
 ```javascript
-Template2.mixin('hello', {
+Template2('hello', {
   states: {
     counter: 0 // default value
   },
@@ -161,7 +161,7 @@ Posts.attachSchema(PostSchema);
 ```
 
 ```javascript
-Template2.mixin('hello', {
+Template2('hello', {
   // Validate the properties passed to the template from parents
   propsSchema: new SimpleSchema({
     param: { type: String }
@@ -229,7 +229,7 @@ any property you define in the schema is turned into a template helper
 that can be used as a reactive getter, also in the html template:
 
 ```javascript
-Template2.mixin('hello', {
+Template2('hello', {
   propsSchema: new SimpleSchema({
     messageCount: {
       type: Number, // allows only integers!
@@ -320,7 +320,7 @@ Described [here](https://github.com/comerc/meteor-template-two-way-binding).
 
 ## Configuration
 
-### `Template2.setPropsCleanConfiguration(Object)`
+### `Template2Config.propsClean(Object)`
 Enables you to configure the props cleaning operation of libs like SimpleSchema. Checkout [SimpleSchema clean docs](https://github.com/aldeed/meteor-simple-schema#cleaning-data) to
 see your options.
 
@@ -332,9 +332,9 @@ Here is one example why `removeEmptyStrings: true` is the default config:
 `i18n` might initially return an empty string for your translation.
 This would cause an validation error because SimpleSchema removes empty strings by default when cleaning the data.
 
-### `Template2.setModelCleanConfiguration(Object)`
+### `Template2Config.modelClean(Object)`
 
-The same as [previos](https://github.com/comerc/meteor-template2#template2setpropscleanconfigurationobject), but for model.
+The same as [previos](https://github.com/comerc/meteor-template2#template2configpropscleanobject), but for model.
 
 ## TODO
 - [ ] AstronomySchema (for compatible with SimpleSchema)
@@ -342,10 +342,15 @@ The same as [previos](https://github.com/comerc/meteor-template2#template2setpro
 - [ ] Wait for throttle & debounce before form submit
 - [ ] Demo with [meteor7](https://github.com/daveeel/meteor7)
 - [ ] Actions, like [blaze-magic-events](https://github.com/themeteorites/blaze-magic-events)
-- [x] Template.hello.init(config) to Template2.mixin(template, config)
 - [ ] Remove underscore dependence
 - [x] [Demo](https://github.com/comerc/meteor-mvvm-mdl-demo) with [Material Design Lite](https://getmdl.io/)
 - [x] Remove helpers `propsOf` and `stateOf`, we may use `{{state.[field-name]}}`
+
+## Change Log
+### 1.5.0
+- `Template2.mixin()` rename to `Template2()`
+- `Template2.setPropsCleanConfiguration(Object)` rename to `Template2Config.propsClean`
+- `Template2.setModelCleanConfiguration(Object)` rename to `Template2Config.modelClean`
 
 ## Inspired by
 
