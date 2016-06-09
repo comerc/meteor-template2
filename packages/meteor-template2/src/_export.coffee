@@ -15,9 +15,9 @@ Template2 = (template, config) ->
     # XXX helpers and events init once
     return if template._isTemplate2Init
     template._isTemplate2Init = true
-    @helpers config.helpers if config.helpers
-    @events config.events if config.events
     return
+  template.helpers bindAllToTemplateInstance(config.helpers) if config.helpers
+  template.events bindAllToTemplateInstance(config.events) if config.events
   template.onCreated config.onCreated if config.onCreated
   template.onRendered config.onRendered if config.onRendered
   template.onRendered ->
