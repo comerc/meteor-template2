@@ -11,9 +11,12 @@ Template2 = (template, config) ->
     @propsSchema config.propsSchema if config.propsSchema
     @modelSchema config.modelSchema if config.modelSchema
     @states config.states if config.states
-    @events config.events if config.events
-    @helpers config.helpers if config.helpers
     @actions config.actions if config.actions
+    # XXX helpers and events init once
+    return if template._isTemplate2Init
+    template._isTemplate2Init = true
+    @helpers config.helpers if config.helpers
+    @events config.events if config.events
     return
   template.onCreated config.onCreated if config.onCreated
   template.onRendered config.onRendered if config.onRendered
