@@ -1,7 +1,7 @@
 Package.describe({
   summary: 'MVVM for Meteor with Two-Way Binding via Model Schema',
   name: 'comerc:template2',
-  version: '1.5.3',
+  version: '1.5.4',
   git: 'https://github.com/comerc/meteor-template2.git'
 });
 
