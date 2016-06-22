@@ -13,7 +13,6 @@ Package.onUse(function(api) {
   api.use([
     'coffeescript',
     'underscore',
-    'es5-shim',
     'ecmascript',
     'reactive-var',
     'templating',
