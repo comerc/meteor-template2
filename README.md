@@ -354,6 +354,7 @@ The same as [previos](https://github.com/comerc/meteor-template2#template2config
 
 ## Inspired by
 
+- [jQuery.my](https://github.com/ermouth/jQuery.my)
 - [Aurelia](http://aurelia.io/)
 - [Vue](https://vuejs.org/guide/#Two-way-Binding)
 - [ReactLink](https://facebook.github.io/react/docs/two-way-binding-helpers.html)
