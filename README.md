@@ -345,6 +345,8 @@ The same as [previos](https://github.com/comerc/meteor-template2#template2config
 - [ ] Remove underscore dependence
 - [x] [Demo](https://github.com/comerc/meteor-mvvm-mdl-demo) with [Material Design Lite](https://getmdl.io/)
 - [x] Remove helpers `propsOf` and `stateOf`, we may use `{{state.[field-name]}}`
+- [ ] [Dependencies](https://github.com/ermouth/jQuery.my/#dependencies)
+- [ ] [Conditional formatting and disabling](https://github.com/ermouth/jQuery.my/#conditional-formatting-and-disabling)
 
 ## Change Log
 ### 1.5.0
